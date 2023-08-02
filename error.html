@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <style>
+
+    .main-containererror {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .containerghst {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      margin: 4rem 0;
+    }
+
+    .ghost,
+    .ghost-copy {
+      width: 50%;
+      height: 53%;
+      left: 25%;
+      top: 10%;
+      position: absolute;
+      border-radius: 50% 50% 0 0;
+      background: #EDEDED;
+      border: 1px solid #BFC0C0;
+      border-bottom: none;
+      animation: float 2s ease-out infinite;
+    }
+
+    .ghost-copy {
+      z-index: 0;
+    }
+
+
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 60%;
+      top: 20%;
+    }
+
+    .eye,
+    .eye-right {
+      position: absolute;
+      background: #585959;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      top: 40%;
+    }
+
+    .eye {
+      left: 25%;
+    }
+
+    .eye-right {
+      right: 25%;
+    }
+
+    .mouth {
+      position: absolute;
+      top: 50%;
+      left: 45%;
+      width: 10px;
+      height: 10px;
+      border: 3px solid;
+      border-radius: 50%;
+      border-color: transparent #585959 #585959 transparent;
+      transform: rotate(45deg);
+    }
+
+    .one,
+    .two,
+    .three,
+    .four {
+      position: absolute;
+      background: #EDEDED;
+      top: 85%;
+      width: 25%;
+      height: 23%;
+      border: 1px solid #BFC0C0;
+      z-index: 0;
+    }
+
+    .one {
+      border-radius: 0 0 100% 30%;
+      left: -1px;
+    }
+
+    .two {
+      left: 23%;
+      border-radius: 0 0 50% 50%;
+    }
+
+    .three {
+      left: 50%;
+      border-radius: 0 0 50% 50%;
+    }
+
+    .four {
+      left: 74.5%;
+      border-radius: 0 0 30% 100%;
+    }
+
+    .shadow {
+      position: absolute;
+      width: 30%;
+      height: 7%;
+      background: #BFC0C0;
+      left: 35%;
+      top: 80%;
+      border-radius: 50%;
+      animation: scale 2s infinite;
+    }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes float {
+      50% {
+        transform: translateY(15px);
+      }
+    }
+
+
+    .errorname {
+      font-family: 'Abril Fatface', serif;
+      color: #EDEDED;
+      text-align: center;
+      font-size: 9em;
+      margin: 0;
+      text-shadow: -1px 0 #BFC0C0, 0 1px #BFC0C0, 1px 0 #BFC0C0, 0 -1px #BFC0C0;
+    }
+
+    .errortitle {
+      font-family: 'Lato', sans-serif;
+      font-size: 2em;
+      text-transform: uppercase;
+      text-align: center;
+      color: #BFC0C0;
+      margin-top: -20px;
+      font-weight: 900;
+    }
+    footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1F73F6;
+    padding-top: 8px;
+  }
+
+
+
+  .rowsss {
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+
+  .cta-text {
+    
+    display: inline-block;
+  }
+
+  .sorun-text {
+    display: inline-block;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+   
+  }
+
+  .ara {
+      text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    
+  
+  }
+
+
+  @media (max-width: 48em) {
+    i {
+      font-size: 15px;
+      padding-bottom: 5px;
+    }
+
+    .sorun-text {
+      font-size: 12px;
+    }
+
+    .sorundiv {
+      width: 30%;
+      margin-left: 10px;
+    }
+
+    .ara {
+      font-size: 11px;
+    }
+
+    .cta-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="maincontainer">
+
+    <div class="main-containererror">
+      <div>
+        <h1 class="errorname">404</h1>
+        <h3 class="errortitle">Page Not Found</h3>
+      </div>
+      <div class="containerghst">
+        <div class="ghost-copy">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+          <div class="four"></div>
+        </div>
+        <div class="ghost">
+          <div class="face">
+            <div class="eye"></div>
+            <div class="eye-right"></div>
+            <div class="mouth"></div>
+          </div>
+        </div>
+        <div class="shadow"></div>
+      </div>
+    </div>
+    <footer>
+        <div class="rowsss">
+            <div class="sorundiv">
+              <h4 class="sorun-text"> For questions and suggestions, please contact.</h4>
+            </div>
+        
+            <div>
+              <div>
+                <span style="color: white; font-size: 26px; padding: 1px">
+           &#9990;
+                </span>
+                <a class="ara" > +1 36363636</a>
+              </div>
+            </div>
+        
+            <div>
+              <div>
+                <span style="color: white; font-size: 26px;">
+                &#9993; 
+                </span>
+                <a class="ara" > hello@hello.com</a>
+              </div>
+            </div>
+          </div>
+        
+        </footer>
+  </div>
+
+
+</body>
+</html>
